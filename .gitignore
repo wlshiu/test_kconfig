@@ -26,7 +26,6 @@ Debug/*
 Release/*
 */Debug/*
 */Release/*
-CMakeLists.txt
 build/*
 project/*.c
 project/*.h
