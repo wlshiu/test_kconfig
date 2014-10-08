@@ -1,0 +1,51 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+
+config CMAKE_SOURCE_DIR
+	string
+	option env="CMAKE_SOURCE_DIR"
+
+config CFG_PLATFORM
+	string
+	option env="CFG_PLATFORM"
+
+##############################################
+
+menu "System"
+
+    config PRIVATE_DRIVE
+        string "The drive of private disk partition"
+        default "A"
+        help
+            The drive of private disk partition
+
+    config PUBLIC_DRIVE
+        string "The drive of public disk partition"
+        default "B"
+        help
+            The drive of public disk partition
+
+    config VERSION_MAJOR
+        string "Version Major"
+        default "0"
+
+    config VERSION_MINOR
+        string "Version Minor"
+        default "0"
+
+    config VERSION_PATCH
+        string "Version Patch"
+        default "0"
+
+    config SYSTEM_NAME
+        string "System Name"
+        default "WL_test"
+
+endmenu
+
+
+##############################################
+
+# source "$CMAKE_SOURCE_DIR/$CFG_PLATFORM/Kconfig"
